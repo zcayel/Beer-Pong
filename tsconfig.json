@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "strict": true,
+    "baseUrl": ".",
+    // cannon-es.d.ts declares Heightfield.setHeightsFromImage(image: HTMLImageElement),
+    // a browser-only method the DCL scene runtime has no DOM lib for. The method is
+    // never called; skipping lib checks keeps our own src/ fully typechecked.
+    "skipLibCheck": true,
+    "paths": {
+      "@dcl/asset-packs/*": ["node_modules/@dcl/inspector/node_modules/@dcl/asset-packs/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "assets/**/*.ts",
+    "assets/**/*.tsx"
+  ],
+  "extends": "@dcl/sdk/types/tsconfig.ecs7.json"
+}

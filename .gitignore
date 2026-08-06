@@ -1,0 +1,17 @@
+package-lock.json
+*.js
+node_modules
+bin/
+.DS_Store
+**/.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.editor
+# The blanket *.js above is meant for stray compiled output, but it also swallows
+# the hand-written tooling in _debug/. Keep the sources, drop the built bundle.
+!_debug/gen_sounds.js
+!_debug/scale_study.js
+_debug/debug_test.js
+_debug/_decoded_tmp.wav
+src/*.bak
